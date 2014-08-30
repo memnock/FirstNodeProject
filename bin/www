@@ -3,7 +3,7 @@
  var app = require('../server');
 
 app.set('port', process.env.PORT || 3030);
-
-var server = app.listen(app.get('port'), function() {
+//app.get('port')
+var server = app.listen(process.env.PORT || 3030, function() {
   debug('Express server listening on port ' + server.address().port);
 });
