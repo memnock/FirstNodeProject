@@ -61,16 +61,6 @@ app.get('*', function(req, res) {
     });
 });
 
-app.get('/partials/:partialPath', function(req, res) {
-    res.render('partials/' + req.params.partialPath);
-});
-
-app.get('*', function(req, res) {
-    res.render('index', {
-        mongoMessage: mongoMessage
-    });
-});
-
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
